@@ -23,7 +23,7 @@ def get_data(page):
     expression = True
     while expression:
         soup = BeautifulSoup(page, "lxml")
-        names = soup.find("div", class_="mw-category").find_all("a")
+        names = soup.find("div", class_="mw-category-group").find_all("a")
         for name in names:
             print(name.text)
             animals.append(name.text)
